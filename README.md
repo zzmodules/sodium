@@ -1,7 +1,7 @@
 sodium
 ======
 
-> [WIP] ZZ Bindings for libsodium
+> [WIP] libsodium bindings for [ZZ][zz].
 
 ## Installation
 
@@ -29,3 +29,5 @@ this module.
 ## License
 
 MIT
+
+[zz]: https://github.com/zetzit/zz
