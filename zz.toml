@@ -1,0 +1,20 @@
+[project]
+version = "1.0.18"
+name = "sodium"
+cincludes = []
+cobjects = []
+pkgconfig = ["libsodium.pc"]
+cflags = []
+lflags = []
+
+[variants]
+default = []
+
+[dependencies]
+err = "*"
+hex = "*"
+log = "*"
+mem = "*"
+slice = "*"
+
+[repos]

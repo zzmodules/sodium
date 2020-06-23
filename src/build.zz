@@ -1,0 +1,23 @@
+using <stdio.h>::{ stdout, fclose }
+using <stdlib.h>::{ exit, system }
+using <libgen.h>::{ dirname }
+using string
+using log
+using mem
+
+export macro init() {
+  fclose(stdout);
+
+  new+4096 command = string::make();
+  new+4096 filename = string::make();
+  new+4096 directory = string::make();
+
+  filename.format("%s", unsafe<char *>(__FILE__));
+  directory.format("%s", dirname(as<char mut *>(filename.cstr())));
+  directory.format("%s", dirname(as<char mut *>(directory.cstr())));
+  command.format("make libsodium -C %s", directory.cstr());
+
+  log::info("will execute %s", command.cstr());
+
+  exit(system(command.cstr()));
+}

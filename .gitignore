@@ -1,0 +1,7 @@
+/target
+.gdb_history
+vgcore.*
+**/*.o
+**/*.parsecache
+**/*.buildcache
+libsodium.pc

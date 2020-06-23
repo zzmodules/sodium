@@ -1,0 +1,261 @@
+using build
+
+fn init() {
+  @build::init();
+}
+
+// core
+export using <sodium.h>::{
+  sodium_init,
+  sodium_set_misuse_handler,
+  sodium_misuse
+}
+
+// aead_aegis128l
+export using <sodium.h>::{
+  crypto_aead_aegis128l_KEYBYTES,
+  crypto_aead_aegis128l_NSECBYTES,
+  crypto_aead_aegis128l_NPUBBYTES,
+  crypto_aead_aegis128l_ABYTES,
+  crypto_aead_aegis128l_MESSAGEBYTES_MAX,
+
+  crypto_aead_aegis128l_is_available,
+  crypto_aead_aegis128l_keybytes,
+  crypto_aead_aegis128l_nsecbytes,
+  crypto_aead_aegis128l_npubbytes,
+  crypto_aead_aegis128l_abytes,
+  crypto_aead_aegis128l_messagebytes_max,
+  crypto_aead_aegis128l_encrypt,
+  crypto_aead_aegis128l_decrypt,
+  crypto_aead_aegis128l_encrypt_detached,
+  crypto_aead_aegis128l_decrypt_detached,
+  crypto_aead_aegis128l_keygen,
+}
+
+// aead_aegis256
+export using <sodium.h>::{
+	crypto_aead_aegis256_KEYBYTES,
+	crypto_aead_aegis256_NSECBYTES,
+	crypto_aead_aegis256_NPUBBYTES,
+	crypto_aead_aegis256_ABYTES,
+	crypto_aead_aegis256_MESSAGEBYTES_MAX,
+
+	crypto_aead_aegis256_is_available,
+	crypto_aead_aegis256_keybytes,
+	crypto_aead_aegis256_nsecbytes,
+	crypto_aead_aegis256_npubbytes,
+	crypto_aead_aegis256_abytes,
+	crypto_aead_aegis256_messagebytes_max,
+	crypto_aead_aegis256_encrypt,
+	crypto_aead_aegis256_decrypt,
+	crypto_aead_aegis256_encrypt_detached,
+	crypto_aead_aegis256_decrypt_detached,
+	crypto_aead_aegis256_keygen,
+}
+
+// aead_aes256gcm
+export using <sodium.h>::{
+  crypto_aead_aes256gcm_KEYBYTES,
+  crypto_aead_aes256gcm_NSECBYTES,
+  crypto_aead_aes256gcm_NPUBBYTES,
+  crypto_aead_aes256gcm_ABYTES,
+  crypto_aead_aes256gcm_MESSAGEBYTES_MAX,
+  crypto_aead_aes256gcm_is_available,
+  crypto_aead_aes256gcm_keybytes,
+  crypto_aead_aes256gcm_nsecbytes,
+  crypto_aead_aes256gcm_npubbytes,
+  crypto_aead_aes256gcm_abytes,
+  crypto_aead_aes256gcm_messagebytes_max,
+  crypto_aead_aes256gcm_statebytes,
+  crypto_aead_aes256gcm_encrypt,
+  crypto_aead_aes256gcm_decrypt,
+  crypto_aead_aes256gcm_encrypt_detached,
+  crypto_aead_aes256gcm_decrypt_detached,
+  crypto_aead_aes256gcm_beforenm,
+  crypto_aead_aes256gcm_encrypt_afternm,
+  crypto_aead_aes256gcm_decrypt_afternm,
+  crypto_aead_aes256gcm_encrypt_detached_afternm,
+  crypto_aead_aes256gcm_decrypt_detached_afternm,
+  crypto_aead_aes256gcm_keygen,
+  crypto_aead_aes256gcm_state,
+}
+
+//aead_chacha20poly1305
+//export using <sodium.h>::{ }
+
+//aead_xchacha20poly1305
+//export using <sodium.h>::{ }
+
+//auth
+//export using <sodium.h>::{ }
+
+//auth_hmacsha256
+//export using <sodium.h>::{ }
+
+//auth_hmacsha512256
+//export using <sodium.h>::{ }
+
+//auth_hmacsha512
+//export using <sodium.h>::{ }
+
+//box_curve25519xchacha20poly1305
+//export using <sodium.h>::{ }
+
+//box_curve25519xsalsa20poly1305
+//export using <sodium.h>::{ }
+
+//box
+//export using <sodium.h>::{ }
+
+//core_ed25519
+//export using <sodium.h>::{ }
+
+//core_hchacha20
+//export using <sodium.h>::{ }
+
+//core_hsalsa20
+//export using <sodium.h>::{ }
+
+//core_ristretto255
+//export using <sodium.h>::{ }
+
+//core_salsa2012
+//export using <sodium.h>::{ }
+
+//core_salsa208
+//export using <sodium.h>::{ }
+
+//core_salsa20
+//export using <sodium.h>::{ }
+
+//generichash_blake2b
+//export using <sodium.h>::{ }
+
+//generichash
+//export using <sodium.h>::{ }
+
+//hash
+//export using <sodium.h>::{ }
+
+//hash_sha256
+//export using <sodium.h>::{ }
+
+//hash_sha512
+//export using <sodium.h>::{ }
+
+//kdf_blake2b
+//export using <sodium.h>::{ }
+
+//kdf
+//export using <sodium.h>::{ }
+
+//kdf_hkdf_sha256
+//export using <sodium.h>::{ }
+
+//kdf_hkdf_sha512
+//export using <sodium.h>::{ }
+
+//kx
+//export using <sodium.h>::{ }
+
+//onetimeauth
+//export using <sodium.h>::{ }
+
+//onetimeauth_poly1305
+//export using <sodium.h>::{ }
+
+//pwhash_argon2id
+//export using <sodium.h>::{ }
+
+//pwhash_argon2i
+//export using <sodium.h>::{ }
+
+//pwhash
+//export using <sodium.h>::{ }
+
+//pwhash_scryptsalsa208sha256
+//export using <sodium.h>::{ }
+
+//scalarmult_curve25519
+//export using <sodium.h>::{ }
+
+//scalarmult_ed25519
+//export using <sodium.h>::{ }
+
+//scalarmult
+//export using <sodium.h>::{ }
+
+//scalarmult_ristretto255
+//export using <sodium.h>::{ }
+
+//secretbox
+//export using <sodium.h>::{ }
+
+//secretbox_xchacha20poly1305
+//export using <sodium.h>::{ }
+
+//secretbox_xsalsa20poly1305
+//export using <sodium.h>::{ }
+
+//secretstream_xchacha20poly1305
+//export using <sodium.h>::{ }
+
+//shorthash
+//export using <sodium.h>::{ }
+
+//shorthash_siphash24
+//export using <sodium.h>::{ }
+
+//sign_ed25519
+//export using <sodium.h>::{ }
+
+//sign
+//export using <sodium.h>::{ }
+
+//stream_chacha20
+//export using <sodium.h>::{ }
+
+//stream
+//export using <sodium.h>::{ }
+
+//stream_salsa2012
+//export using <sodium.h>::{ }
+
+//stream_salsa208
+//export using <sodium.h>::{ }
+
+//stream_salsa20
+//export using <sodium.h>::{ }
+
+//stream_xchacha20
+//export using <sodium.h>::{ }
+
+//stream_xsalsa20
+//export using <sodium.h>::{ }
+
+//verify_16
+//export using <sodium.h>::{ }
+
+//verify_32
+//export using <sodium.h>::{ }
+
+//verify_64
+//export using <sodium.h>::{ }
+
+//randombytes
+//export using <sodium.h>::{ }
+
+//randombytes_internal_random
+//export using <sodium.h>::{ }
+
+//randombytes_sysrandom
+//export using <sodium.h>::{ }
+
+//runtime
+//export using <sodium.h>::{ }
+
+//utils
+//export using <sodium.h>::{ }
+
+//version
+//export using <sodium.h>::{ }
