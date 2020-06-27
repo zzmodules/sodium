@@ -14,7 +14,7 @@ export macro init() {
   getcwd(cwd, sizeof(cwd));
   chdir(current_project.path.cstr());
 
-  command.format("make -C %s", current_project.path.cstr());
+  command.format("make %s", current_project.path.cstr());
 
   log::info("will execute %s", command.cstr());
 
