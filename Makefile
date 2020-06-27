@@ -7,7 +7,7 @@ target/lib/libsodium.a:
 	mkdir -p target
 	{ \
 		cd libsodium && \
-		autoconf && \
+		autoconf -f && \
 		sh ./autogen.sh -f && \
 		CFLAGS=-fPIC ./configure --disable-shared --prefix=$(CWD)/target && \
 		make && \
