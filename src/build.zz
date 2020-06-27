@@ -7,20 +7,26 @@ using log
 using mem
 
 export macro init() {
+  fclose(stdout);
+
   new current_project = project::current();
   new+4096 command = string::make();
-  char mut cwd[1024];
 
+  char mut cwd[1024];
   getcwd(cwd, sizeof(cwd));
   chdir(current_project.path.cstr());
 
-  command.format("make %s", current_project.path.cstr());
+  command.append_cstr("make");
+  //command.format("make -C %s", current_project.path.cstr());
 
-  log::info("will execute %s", command.cstr());
+  let current_project_path_string = current_project.path.cstr();
+  let command_string = command.cstr();
 
-  fclose(stdout);
-  let cmd = command.cstr();
-  int status = unsafe<int>(system(cmd));
+  log::info("will execute: '%s' in '%s'",
+    command_string,
+    current_project_path_string);
+
+  let status = unsafe<int>(system(command_string));
   chdir(cwd);
   exit(status);
 }
