@@ -15,6 +15,8 @@ err = "*"
 hex = "*"
 log = "*"
 mem = "*"
+project = "*"
 slice = "*"
 
 [repos]
+project = "git://github.com/zzmodules/project"

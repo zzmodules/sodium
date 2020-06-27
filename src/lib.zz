@@ -6,6 +6,8 @@ fn init() {
 
 // core
 export using <sodium.h>::{
+  SODIUM_SIZE_MAX,
+
   sodium_init,
   sodium_set_misuse_handler,
   sodium_misuse
@@ -60,6 +62,7 @@ export using <sodium.h>::{
   crypto_aead_aes256gcm_NPUBBYTES,
   crypto_aead_aes256gcm_ABYTES,
   crypto_aead_aes256gcm_MESSAGEBYTES_MAX,
+
   crypto_aead_aes256gcm_is_available,
   crypto_aead_aes256gcm_keybytes,
   crypto_aead_aes256gcm_nsecbytes,
@@ -80,19 +83,104 @@ export using <sodium.h>::{
   crypto_aead_aes256gcm_state,
 }
 
-//aead_chacha20poly1305
-//export using <sodium.h>::{ }
+// aead_chacha20poly1305
+export using <sodium.h>::{
+  crypto_aead_chacha20poly1305_ietf_KEYBYTES,
+  crypto_aead_chacha20poly1305_ietf_NSECBYTES,
+  crypto_aead_chacha20poly1305_ietf_NPUBBYTES,
+  crypto_aead_chacha20poly1305_ietf_ABYTES,
+  crypto_aead_chacha20poly1305_ietf_MESSAGEBYTES_MAX,
+  crypto_aead_chacha20poly1305_KEYBYTES,
+  crypto_aead_chacha20poly1305_NSECBYTES,
+  crypto_aead_chacha20poly1305_NPUBBYTES,
+  crypto_aead_chacha20poly1305_ABYTES,
+  crypto_aead_chacha20poly1305_MESSAGEBYTES_MAX,
+  crypto_aead_chacha20poly1305_IETF_KEYBYTES,
+  crypto_aead_chacha20poly1305_IETF_NSECBYTES,
+  crypto_aead_chacha20poly1305_IETF_NPUBBYTES,
+  crypto_aead_chacha20poly1305_IETF_ABYTES,
+  crypto_aead_chacha20poly1305_IETF_MESSAGEBYTES_MAX,
 
-//aead_xchacha20poly1305
-//export using <sodium.h>::{ }
+  crypto_aead_chacha20poly1305_ietf_keybytes,
+  crypto_aead_chacha20poly1305_ietf_nsecbytes,
+  crypto_aead_chacha20poly1305_ietf_npubbytes,
+  crypto_aead_chacha20poly1305_ietf_abytes,
+  crypto_aead_chacha20poly1305_ietf_messagebytes_max,
+  crypto_aead_chacha20poly1305_ietf_encrypt,
+  crypto_aead_chacha20poly1305_ietf_decrypt,
+  crypto_aead_chacha20poly1305_ietf_encrypt_detached,
+  crypto_aead_chacha20poly1305_ietf_decrypt_detached,
+  crypto_aead_chacha20poly1305_ietf_keygen,
+  crypto_aead_chacha20poly1305_keybytes,
+  crypto_aead_chacha20poly1305_nsecbytes,
+  crypto_aead_chacha20poly1305_npubbytes,
+  crypto_aead_chacha20poly1305_abytes,
+  crypto_aead_chacha20poly1305_messagebytes_max,
+  crypto_aead_chacha20poly1305_encrypt,
+  crypto_aead_chacha20poly1305_decrypt,
+  crypto_aead_chacha20poly1305_encrypt_detached,
+  crypto_aead_chacha20poly1305_decrypt_detached,
+  crypto_aead_chacha20poly1305_keygen,
+}
 
-//auth
-//export using <sodium.h>::{ }
+// aead_xchacha20poly1305
+export using <sodium.h>::{
+  crypto_aead_xchacha20poly1305_ietf_KEYBYTES,
+  crypto_aead_xchacha20poly1305_ietf_NSECBYTES,
+  crypto_aead_xchacha20poly1305_ietf_NPUBBYTES,
+  crypto_aead_xchacha20poly1305_ietf_ABYTES,
+  crypto_aead_xchacha20poly1305_ietf_MESSAGEBYTES_MAX,
+  crypto_aead_xchacha20poly1305_IETF_KEYBYTES,
+  crypto_aead_xchacha20poly1305_IETF_NSECBYTES,
+  crypto_aead_xchacha20poly1305_IETF_NPUBBYTES,
+  crypto_aead_xchacha20poly1305_IETF_ABYTES,
+  crypto_aead_xchacha20poly1305_IETF_MESSAGEBYTES_MAX,
 
-//auth_hmacsha256
-//export using <sodium.h>::{ }
+  crypto_aead_xchacha20poly1305_ietf_keybytes,
+  crypto_aead_xchacha20poly1305_ietf_nsecbytes,
+  crypto_aead_xchacha20poly1305_ietf_npubbytes,
+  crypto_aead_xchacha20poly1305_ietf_abytes,
+  crypto_aead_xchacha20poly1305_ietf_messagebytes_max,
+  crypto_aead_xchacha20poly1305_ietf_encrypt,
+  crypto_aead_xchacha20poly1305_ietf_decrypt,
+  crypto_aead_xchacha20poly1305_ietf_encrypt_detached,
+  crypto_aead_xchacha20poly1305_ietf_decrypt_detached,
+  crypto_aead_xchacha20poly1305_ietf_keygen,
+}
 
-//auth_hmacsha512256
+// auth
+export using <sodium.h>::{
+  crypto_auth_BYTES,
+  crypto_auth_KEYBYTES,
+  crypto_auth_PRIMITIVE,
+
+  crypto_auth_bytes,
+  crypto_auth_keybytes,
+  crypto_auth_primitive,
+  crypto_auth,
+  crypto_auth_verify,
+  crypto_auth_keygen,
+}
+
+// auth_hmacsha256
+export using <sodium.h>::{
+  crypto_auth_hmacsha256_BYTES,
+  crypto_auth_hmacsha256_KEYBYTES,
+
+  crypto_auth_hmacsha256_bytes,
+  crypto_auth_hmacsha256_keybytes,
+  crypto_auth_hmacsha256,
+  crypto_auth_hmacsha256_verify,
+  crypto_auth_hmacsha256_statebytes,
+  crypto_auth_hmacsha256_init,
+  crypto_auth_hmacsha256_update,
+  crypto_auth_hmacsha256_final,
+  crypto_auth_hmacsha256_keygen,
+
+  crypto_auth_hmacsha256_state,
+}
+
+// auth_hmacsha512256
 //export using <sodium.h>::{ }
 
 //auth_hmacsha512

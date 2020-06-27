@@ -4,4 +4,3 @@ vgcore.*
 **/*.o
 **/*.parsecache
 **/*.buildcache
-libsodium.pc

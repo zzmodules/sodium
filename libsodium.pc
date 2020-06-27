@@ -1,0 +1,4 @@
+Name: sodium
+Version: 1.0.18
+Description: libsodium bindings for ZZ
+Requires: libsodium/libsodium.pc
