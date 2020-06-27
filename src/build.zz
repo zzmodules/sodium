@@ -1,5 +1,6 @@
 using <stdio.h>::{ stdout, fclose }
 using <stdlib.h>::{ exit, system }
+using <unistd.h>::{ chdir, getcwd }
 using project
 using string
 using log
@@ -8,11 +9,18 @@ using mem
 export macro init() {
   new current_project = project::current();
   new+4096 command = string::make();
+  char mut cwd[1024];
+
+  getcwd(cwd, sizeof(cwd));
+  chdir(current_project.path.cstr());
 
   command.format("make -C %s", current_project.path.cstr());
 
   log::info("will execute %s", command.cstr());
 
   fclose(stdout);
-  exit(system(command.cstr()));
+  let cmd = command.cstr();
+  int status = unsafe<int>(system(cmd));
+  chdir(cwd);
+  exit(status);
 }
